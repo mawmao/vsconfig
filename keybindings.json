@@ -1,0 +1,155 @@
+// Place your key bindings in this file to override the defaults
+[
+  // move lines
+  {
+    "key": "shift+k",
+    "command": "editor.action.moveLinesUpAction"
+  },
+  {
+    "key": "shift+j",
+    "command": "editor.action.moveLinesDownAction"
+  },
+  // terminal
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // misc
+  {
+    "key": "ctrl+shift+d",
+    "command": "editor.action.copyLinesDownAction"
+  },
+  // tab navigation
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.openEditorAtIndex1",
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.action.openEditorAtIndex2",
+  },
+  {
+    "key": "ctrl+3",
+    "command": "workbench.action.openEditorAtIndex3",
+  },
+  {
+    "key": "ctrl+4",
+    "command": "workbench.action.openEditorAtIndex4",
+  },
+  {
+    "key": "ctrl+5",
+    "command": "workbench.action.openEditorAtIndex5",
+  },
+  {
+    "key": "ctrl+6",
+    "command": "workbench.action.openEditorAtIndex6",
+  },
+  {
+    "key": "ctrl+7",
+    "command": "workbench.action.openEditorAtIndex7",
+  },
+  {
+    "key": "ctrl+8",
+    "command": "workbench.action.openEditorAtIndex8",
+  },
+  {
+    "key": "ctrl+9",
+    "command": "workbench.action.openEditorAtIndex9",
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+  },
+  // explorer
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": ""
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.files.action.focusFilesExplorer",
+    "when": "editorTextFocus"
+  },
+  // files management
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "y",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  // extra
+  {
+    "key": "ctrl+shift+z",
+    "command": "workbench.action.toggleZenMode",
+  },
+  // scrolling on hover
+  {
+    "key": "h",
+    "command": "editor.action.scrollLeftHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "l",
+    "command": "editor.action.scrollRightHover",
+    "when": "editorHoverFocused"
+  }
+]
