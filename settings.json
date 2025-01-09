@@ -1,80 +1,86 @@
 {
-	"workbench.sideBar.location": "right",
-	"workbench.colorTheme": "Winter is Coming (Dark Blue)",
-	// ==== editor ====
-	"editor.cursorBlinking": "phase",
-	"editor.autoIndent": "full",
-	"editor.fontFamily": "'JetBrainsMono Nerd Font'",
-	"editor.fontSize": 18,
-	"editor.fontLigatures": true,
-	"editor.cursorSurroundingLines": 10,
-	"editor.formatOnSave": true,
-	"editor.accessibilitySupport": "off",
-	"editor.lineNumbers": "relative",
-	"editor.minimap.enabled": false,
-	"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-	// ==== window ====
-	"window.dialogStyle": "custom",
-	"window.customTitleBarVisibility": "auto",
-	"workbench.editor.dragToOpenWindow": false,
-	"window.titleBarStyle": "custom",
-	// ==== transparency ====
-	"glassit.alpha": 250,
-	"glassit.step": 10,
-	// ==== terminal ====
-	"terminal.integrated.tabs.location": "left",
-	// ==== vim ====
-	"vim.useSystemClipboard": true,
-	"vim.hlsearch": true,
-	"vim.leader": "<Space>",
-	"vim.highlightedyank.enable": true,
-	"vim.highlightedyank.color": "#219fd5",
-	"vim.highlightedyank.duration": 100,
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": [
-				"leader",
-				"<Space>"
-			],
-			"commands": [
-				"workbench.action.quickOpen",
-			]
-		},
-		{
-			"before": [
-				"leader",
-				"/"
-			],
-			"commands": [
-				"actions.find",
-			]
-		},
-		{
-			"before": [
-				"g",
-				"d"
-			],
-			"commands": [
-				"editor.action.revealDefinition",
-			]
-		},
-		{
-			"before": [
-				"g",
-				"i"
-			],
-			"commands": [
-				"editor.action.goToImplementation",
-			]
-		},
-		{
-			"before": [
-				"g",
-				"h",
-			],
-			"commands": [
-				"editor.action.showHover"
-			]
-		},
-	],
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
+  "workbench.editor.dragToOpenWindow": false,
+
+  // ==== editor ====
+  "editor.cursorBlinking": "phase",
+  "editor.autoIndent": "full",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.fontSize": 18,
+  "editor.fontLigatures": true,
+  "editor.cursorSurroundingLines": 10,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.accessibilitySupport": "off",
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.snippetSuggestions": "top",
+  "editor.lineHeight": 1.5,
+
+  // ==== window ====
+  "window.dialogStyle": "custom",
+  "window.customTitleBarVisibility": "auto",
+  "window.titleBarStyle": "custom",
+  "window.enableMenuBarMnemonics": false,
+  "window.experimentalControlOverlay": false,
+
+  // ==== transparency ====
+  "glassit.alpha": 250,
+  "glassit.step": 10,
+
+  // ==== emmet ====
+  "emmet.showSuggestionsAsSnippets": true,
+
+  // ==== terminal ====
+  "terminal.integrated.tabs.location": "left",
+
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+
+  // ==== vim ====
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<Space>",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "#219fd5",
+  "vim.highlightedyank.duration": 100,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "<Space>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "/"],
+      "commands": ["actions.find"]
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<C-a>"],
+      "after": ["g", "g", "V", "G"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-e>"],
+      "after": ["<Esc>", "A"]
+    }
+  ]
 }
+
