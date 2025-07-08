@@ -1,49 +1,36 @@
 {
+  "deno.enable": true,
   "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "workbench.editor.dragToOpenWindow": false,
-
-  // ==== editor ====
+  "editor.fontSize": 16,
   "editor.cursorBlinking": "phase",
   "editor.autoIndent": "full",
   "editor.fontFamily": "'JetBrainsMono Nerd Font'",
-  "editor.fontSize": 18,
   "editor.fontLigatures": true,
   "editor.cursorSurroundingLines": 10,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.rulers": [80],
+  "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.accessibilitySupport": "off",
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-  "editor.snippetSuggestions": "top",
-  "editor.lineHeight": 1.5,
-
-  // ==== window ====
+  "editor.lineHeight": 1.6,
   "window.dialogStyle": "custom",
   "window.customTitleBarVisibility": "auto",
   "window.titleBarStyle": "custom",
-  "window.enableMenuBarMnemonics": false,
   "window.experimentalControlOverlay": false,
-
-  // ==== transparency ====
-  "glassit.alpha": 250,
-  "glassit.step": 10,
-
-  // ==== emmet ====
   "emmet.showSuggestionsAsSnippets": true,
-
-  // ==== terminal ====
-  "terminal.integrated.tabs.location": "left",
-
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
+  "emmet.syntaxProfiles": {
+    "jsx": { "selfClosingStyle": "xhtml" },
+    "tsx": { "selfClosingStyle": "xhtml" }
   },
-
-  // ==== vim ====
+  "emmet.includeLanguages": {
+    "javascript": "jsx",
+    "typescript": "tsx"
+  },
+  "terminal.integrated.tabs.location": "left",
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
   "vim.leader": "<Space>",
@@ -52,35 +39,129 @@
   "vim.highlightedyank.duration": 100,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["leader", "<Space>"],
+      "before": ["leader","leader"],
       "commands": ["workbench.action.quickOpen"]
     },
     {
-      "before": ["leader", "/"],
-      "commands": ["actions.find"]
+      "before": ["leader","1"],
+      "commands": ["workbench.action.openEditorAtIndex1"]
     },
     {
-      "before": ["g", "d"],
-      "commands": ["editor.action.revealDefinition"]
+      "before": ["leader","2"],
+      "commands": ["workbench.action.openEditorAtIndex2"]
     },
     {
-      "before": ["g", "i"],
-      "commands": ["editor.action.goToImplementation"]
+      "before": ["leader","3"],
+      "commands": ["workbench.action.openEditorAtIndex3"]
     },
     {
-      "before": ["g", "h"],
-      "commands": ["editor.action.showHover"]
+      "before": ["leader","4"],
+      "commands": ["workbench.action.openEditorAtIndex4"]
     },
     {
-      "before": ["<C-a>"],
-      "after": ["g", "g", "V", "G"]
+      "before": ["leader","5"],
+      "commands": ["workbench.action.openEditorAtIndex5"]
+    },
+    {
+      "before": ["leader","6"],
+      "commands": ["workbench.action.openEditorAtIndex6"]
+    },
+    {
+      "before": ["leader","7"],
+      "commands": ["workbench.action.openEditorAtIndex7"]
+    },
+    {
+      "before": ["leader","8"],
+      "commands": ["workbench.action.openEditorAtIndex8"]
+    },
+    {
+      "before": ["leader","9"],
+      "commands": ["workbench.action.openEditorAtIndex9"]
+    },
+    {
+      "before": ["leader","/" ],
+      "commands": [ "actions.find"]
+    },
+    {
+      "before": [ "g", "d" ],
+      "commands": [ "typescript.goToSourceDefinition" ]
+    },
+    {
+      "before": [ "g", "i" ],
+      "commands": [ "editor.action.goToImplementation" ]
+    },
+    {
+      "before": [ "g", "h" ],
+      "commands": [ "editor.action.showHover" ]
+    },
+    {
+      "before": [ "g", "f" ],
+      "commands": [ "editor.action.quickFix" ]
+    },
+    {
+      "before": [ "g", "s" ],
+      "commands": [ "typescript.goToSourceDefinition" ]
+    },
+    {
+      "before": [ "<C-a>" ],
+      "after": [ "g", "g", "V", "G" ]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
     {
-      "before": ["<C-e>"],
-      "after": ["<Esc>", "A"]
+      "before": [ "<C-e>" ],
+      "after": [ "<Esc>", "A" ]
     }
-  ]
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [ "J" ],
+      "commands": [ "editor.action.moveLinesDownAction" ]
+    },
+    {
+      "before": [ "K" ],
+      "commands": [ "editor.action.moveLinesUpAction" ] 
+    }
+  ],
+  "tailwindCSS.emmetCompletions": true,
+  "breadcrumbs.enabled": true,
+  "explorer.confirmPasteNative": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.exclude": {
+    ".vscode": false,
+    "**/.git/objects/**": true,
+    "**/.venv": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/venv": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/dist/**": true
+  },
+  "search.exclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/tmp/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true
+  },
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "search.followSymlinks": false,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 140,
+  "terminal.integrated.env.linux": {},
+  "makefile.configureOnOpen": true,
+  "cursor.general.disableHttp2": true
 }
-
